@@ -208,40 +208,83 @@
   .tagline b { color: var(--orange); }
 
   .ca-box {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
-    background: rgba(255,255,255,.08);
-    border: 2px dashed rgba(255,255,255,.35);
-    border-radius: 14px;
-    padding: 12px 20px;
-    margin: 18px 0 28px;
-    font-size: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 14px;
+    background: var(--blue);
+    border: 3px solid #000;
+    border-radius: 16px;
+    box-shadow: 7px 7px 0 rgba(0,0,0,.5);
+    padding: 14px 18px 14px 84px;
+    margin: 26px 0 30px;
+    font-size: 16px;
+    transform: rotate(-1.5deg);
+    transition: transform .15s ease, box-shadow .15s ease;
+    max-width: 100%;
   }
 
-  .ca-box code { color: var(--orange); font-weight: 700; letter-spacing: 1px; }
+  .ca-box:hover {
+    transform: rotate(0deg) translate(3px, 3px);
+    box-shadow: 4px 4px 0 rgba(0,0,0,.5);
+  }
+
+  .ca-tag {
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-5deg);
+    background: var(--orange);
+    color: var(--blue-dark);
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border: 3px solid #000;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 rgba(0,0,0,.5);
+  }
+
+  .ca-box code {
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: .5px;
+    word-break: break-all;
+  }
 
   .ca-box button {
-    background: transparent;
-    border: 2px solid var(--orange);
-    color: var(--orange);
+    background: var(--orange);
+    border: 3px solid #000;
+    color: var(--blue-dark);
     font-weight: 700;
-    font-size: 13px;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 6px 16px;
-    border-radius: 8px;
+    padding: 8px 18px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 rgba(0,0,0,.5);
     cursor: pointer;
-    font-family: inherit;
-    transition: background .15s, color .15s, transform .15s;
+    transition: transform .12s, box-shadow .12s;
+    flex-shrink: 0;
   }
 
   .ca-box button:hover {
-    background: var(--orange);
-    color: var(--blue-dark);
-    transform: translateY(-1px);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 rgba(0,0,0,.5);
+  }
+
+  .ca-box button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 rgba(0,0,0,.5);
+  }
+
+  @media (max-width: 560px) {
+    .ca-box { flex-wrap: wrap; justify-content: center; padding-left: 72px; }
+    .ca-tag { left: -10px; font-size: 16px; padding: 6px 12px; }
   }
 
   .hero-btns { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
@@ -612,7 +655,7 @@
   The memecoin of the orangutan who survived on condensed milk and refuses to stop climbing.</p>
 
   <div class="ca-box">
-    <span>Contract:</span>
+    <span class="ca-tag">CA</span>
     <code>SOON... Budi is still climbing</code>
     <button onclick="copyCA(this)">Copy</button>
   </div>
