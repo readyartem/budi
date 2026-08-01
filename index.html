@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$BUDI — From Chicken Cage to the Moon</title>
+<title>$BUDI | From Chicken Cage to the Moon</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,19 +85,31 @@
   .header-nav .nav-link:hover { color: var(--orange); }
 
   .header-buy {
-    background: linear-gradient(180deg, #ffb63d, var(--orange));
+    background: var(--orange);
     color: var(--blue-dark);
     font-family: 'Balsamiq Sans', cursive;
     font-weight: 700;
-    font-size: 19px;
-    padding: 12px 34px;
-    border-radius: 100px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 10px 26px;
+    border-radius: 10px;
+    border: 3px solid #000;
     text-decoration: none;
-    box-shadow: 0 4px 0 var(--orange-deep);
-    transition: transform .15s, box-shadow .15s;
+    box-shadow: 5px 5px 0 rgba(0,0,0,.5);
+    transform: rotate(-1.5deg);
+    transition: transform .12s ease, box-shadow .12s ease;
   }
 
-  .header-buy:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--orange-deep); }
+  .header-buy:hover {
+    transform: rotate(0deg) translate(3px, 3px);
+    box-shadow: 2px 2px 0 rgba(0,0,0,.5);
+  }
+
+  .header-buy:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 rgba(0,0,0,.5);
+  }
 
   @media (max-width: 720px) {
     .header { padding: 10px 18px; }
@@ -214,44 +226,75 @@
   .ca-box code { color: var(--orange); font-weight: 700; letter-spacing: 1px; }
 
   .ca-box button {
-    background: var(--orange);
-    border: none;
-    color: var(--blue-dark);
+    background: transparent;
+    border: 2px solid var(--orange);
+    color: var(--orange);
     font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     padding: 6px 16px;
     border-radius: 8px;
     cursor: pointer;
     font-family: inherit;
-    transition: transform .15s;
+    transition: background .15s, color .15s, transform .15s;
   }
 
-  .ca-box button:hover { transform: scale(1.08); }
+  .ca-box button:hover {
+    background: var(--orange);
+    color: var(--blue-dark);
+    transform: translateY(-1px);
+  }
 
-  .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .hero-btns { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
 
   .btn {
     display: inline-block;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    padding: 16px 42px;
-    border-radius: 100px;
-    transition: transform .15s, box-shadow .15s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 16px 38px;
+    border-radius: 14px;
+    border: 3px solid #000;
+    transition: transform .12s ease, box-shadow .12s ease;
   }
-
-  .btn:hover { transform: translateY(-4px) scale(1.03); }
 
   .btn-primary {
-    background: linear-gradient(180deg, #ffb63d, var(--orange));
+    background: var(--orange);
     color: var(--blue-dark);
-    box-shadow: 0 8px 0 var(--orange-deep), 0 18px 30px rgba(0,0,0,.35);
+    box-shadow: 7px 7px 0 rgba(0,0,0,.5);
+    transform: rotate(-2deg);
   }
 
-  .btn-primary:hover { box-shadow: 0 12px 0 var(--orange-deep), 0 22px 34px rgba(0,0,0,.4); }
+  .btn-primary:hover {
+    transform: rotate(0deg) translate(4px, 4px);
+    box-shadow: 3px 3px 0 rgba(0,0,0,.5);
+  }
+
+  .btn-primary:active {
+    transform: translate(7px, 7px);
+    box-shadow: 0 0 0 rgba(0,0,0,.5);
+  }
 
   .btn-ghost {
-    border: 3px solid #fff;
+    background: transparent;
     color: #fff;
+    border-color: #fff;
+    box-shadow: 7px 7px 0 rgba(255,255,255,.25);
+    transform: rotate(2deg);
+  }
+
+  .btn-ghost:hover {
+    background: rgba(255,255,255,.1);
+    transform: rotate(0deg) translate(4px, 4px);
+    box-shadow: 3px 3px 0 rgba(255,255,255,.25);
+  }
+
+  .btn-ghost:active {
+    transform: translate(7px, 7px);
+    box-shadow: 0 0 0 rgba(255,255,255,.25);
   }
 
   /* ============ MARQUEE ============ */
@@ -561,14 +604,14 @@
   <svg class="banana" style="width:55px; top:84%; right:6%"><use href="#banana"/></svg>
 
   <div class="logo-wrap">
-    <img src="budi-logo.jpg" alt="Budi — orangutan, legend">
+    <img src="budi-logo.jpg" alt="Budi the orangutan legend">
   </div>
 
   <div class="ticker">Real. Rescued. Unstoppable.</div>
 
   <h1>$<span>BUDI</span></h1>
 
-  <p class="tagline">From a chicken cage — <b>straight to the Moon.</b><br>
+  <p class="tagline">From a chicken cage <b>straight to the Moon.</b><br>
   The memecoin of the orangutan who survived on condensed milk and refuses to stop climbing.</p>
 
   <div class="ca-box">
@@ -598,33 +641,33 @@
 
   <div class="timeline">
     <div class="event">
-      <span class="year">2014 — Starting from zero</span>
+      <span class="year">2014: Starting from zero</span>
       <h3>Life in a chicken cage</h3>
       <p>Budi spent the first year of his life in a chicken coop, and his entire diet was condensed milk. Yes, literally: condensed milk for breakfast, lunch and dinner. His portfolio was deep in the red, but even back then he was a world-class hodler.</p>
     </div>
 
     <div class="event">
-      <span class="year">December 2014 — The Rescue</span>
+      <span class="year">December 2014: The Rescue</span>
       <h3>10 hours of pain and hope</h3>
-      <p>The International Animal Rescue team carried him to the rescue centre — more than 10 hours by boat and by road. Budi was so weak he couldn't even sit up. The vets weren't sure he would make it. He made it. Remember this moment — that was the bottom the pump started from.</p>
+      <p>The International Animal Rescue team carried him to the rescue centre, more than 10 hours by boat and by road. Budi was so weak he couldn't even sit up. The vets weren't sure he would make it. He made it. Remember this moment: that was the bottom the pump started from.</p>
     </div>
 
     <div class="event">
-      <span class="year">2015–2016 — Rehabilitation</span>
+      <span class="year">2015-2016: Rehabilitation</span>
       <h3>Learning to chew, learning to fly</h3>
-      <p>Budi had to relearn everything: chewing solid food, sitting up, climbing branches. The first thing he did was stuff himself with oranges and bananas (leafy greens were politely ignored — the ape knows what's good). Then came best friends Jemmi and Jacko — the first gang, the first community.</p>
+      <p>Budi had to relearn everything: chewing solid food, sitting up, climbing branches. The first thing he did was stuff himself with oranges and bananas (leafy greens were politely ignored, the ape knows what's good). Then came best friends Jemmi and Jacko, the first gang and the first community.</p>
     </div>
 
     <div class="event">
-      <span class="year">2017–2022 — School of life</span>
+      <span class="year">2017-2022: School of life</span>
       <h3>Baby School → Forest School</h3>
-      <p>Budi graduated from Baby School and enrolled in Forest School — the Ivy League for future jungle kings. He learned to build nests, fish termites out of rotten branches, and became so popular that he now teaches the younger apes himself. From chicken cage to mentorship. Now that's growth.</p>
+      <p>Budi graduated from Baby School and enrolled in Forest School, the Ivy League for future jungle kings. He learned to build nests, fish termites out of rotten branches, and became so popular that he now teaches the younger apes himself. From chicken cage to mentorship. Now that's growth.</p>
     </div>
 
     <div class="event final">
-      <span class="year">June 2023 — The Release</span>
+      <span class="year">June 2023: The Release</span>
       <h3>Freedom. Full bags. Moon.</h3>
-      <p>After 8 years of rehabilitation, Budi was released into the wild — Bukit Baka Bukit Raya National Park in Borneo. Four days of trekking through the jungle, and he was home. Free, healthy and unstoppable. Which is exactly where $BUDI is heading.</p>
+      <p>After 8 years of rehabilitation, Budi was released into the wild at Bukit Baka Bukit Raya National Park in Borneo. Four days of trekking through the jungle, and he was home. Free, healthy and unstoppable. Which is exactly where $BUDI is heading.</p>
     </div>
   </div>
 </section>
@@ -632,7 +675,7 @@
 <!-- ================= GALLERY ================= -->
 <section class="gallery" id="gallery">
   <h2 class="section-title">The many faces of <span>Budi</span></h2>
-  <p class="section-sub">Budi is not just a coin. Budi is a lifestyle. Hover the memes — every single one is canon.</p>
+  <p class="section-sub">Budi is not just a coin. Budi is a lifestyle. Hover the memes. Every single one is canon.</p>
 
   <div class="gallery-grid">
     <div class="meme">
@@ -678,7 +721,7 @@
         <img src="budi-logo.jpg" alt="Budi logo">
         <span class="word">$<span>BUDI</span></span>
       </a>
-      <p class="footer-desc">A memecoin made for fun, in honor of a real hero — Budi the orangutan, rescued by the International Animal Rescue team.</p>
+      <p class="footer-desc">A memecoin made for fun, in honor of a real hero, Budi the orangutan, rescued by the International Animal Rescue team.</p>
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
