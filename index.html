@@ -120,7 +120,7 @@
   /* ============ HERO ============ */
   .hero {
     min-height: calc(100vh - 78px);
-    background: linear-gradient(rgba(8,31,51,.25), rgba(8,31,51,.4)), var(--blue-dark) url('bg/hero-bg.webp') center center / cover no-repeat;
+    background: var(--cream);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,7 +129,7 @@
     padding: 60px 20px 100px;
     position: relative;
     overflow: hidden;
-    color: #fff;
+    color: var(--text);
   }
 
   .logo-wrap {
@@ -143,7 +143,6 @@
     position: relative;
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 25px 70px rgba(0,0,0,.55);
     z-index: 1;
     display: block;
   }
@@ -155,8 +154,8 @@
 
   .ticker {
     display: inline-block;
-    background: var(--green);
-    color: var(--blue-dark);
+    background: var(--blue);
+    color: #fff;
     font-weight: 700;
     padding: 6px 22px;
     border-radius: 100px;
@@ -170,7 +169,6 @@
   .hero h1 {
     font-size: clamp(56px, 12vw, 130px);
     line-height: .95;
-    text-shadow: 0 6px 0 rgba(0,0,0,.8), 0 14px 40px rgba(0,0,0,.5);
     letter-spacing: 2px;
   }
 
@@ -343,11 +341,10 @@
 
   /* ============ STORY ============ */
   .story {
-    background: linear-gradient(rgba(8,31,51,.3), rgba(8,31,51,.5)), var(--blue-dark) url('bg/story-bg.webp') center center / cover no-repeat;
+    background: var(--cream);
     position: relative;
     overflow: hidden;
     padding: 110px 20px 100px;
-    border-bottom: 4px solid var(--orange);
     margin-top: -45px;
     z-index: 1;
   }
@@ -377,19 +374,6 @@
   }
 
   .section-sub b { color: var(--orange-deep); }
-
-  .story .section-title {
-    color: #fff;
-    text-shadow: 0 4px 0 rgba(0,0,0,.8);
-  }
-
-  .story .section-title span { color: var(--orange); }
-
-  .story .section-sub {
-    color: #cfe0ec;
-  }
-
-  .story .section-sub b { color: var(--orange); }
 
   .timeline { position: relative; padding-left: 34px; }
 
@@ -490,22 +474,12 @@
 
   /* ============ GALLERY ============ */
   .gallery {
-    background: linear-gradient(rgba(8,31,51,.3), rgba(8,31,51,.5)), var(--blue-dark) url('bg/gallery-bg.webp') center center / cover no-repeat;
-    color: #fff;
+    background: var(--cream);
+    color: var(--text);
     padding: 110px 20px 120px;
     position: relative;
     overflow: hidden;
     border-bottom: 4px solid var(--orange);
-  }
-
-  .gallery .section-title {
-    color: #fff;
-    text-shadow: 0 4px 0 rgba(0,0,0,.8);
-  }
-  .gallery .section-title span { color: var(--orange); }
-
-  .gallery .section-sub {
-    color: #cfe0ec;
   }
 
   .gallery-grid {
@@ -608,11 +582,11 @@
     max-width: 1400px;
     margin: 0 auto 44px;
     display: grid;
-    grid-template-columns: 1.3fr 0.8fr 1.1fr;
+    grid-template-columns: 1.3fr 1fr 1fr;
     gap: 50px;
   }
 
-  .footer-ca .ca-box { margin-top: 4px; }
+  .footer-ca .ca-box { display: inline-flex; margin-top: 4px; }
 
   .footer-logo {
     display: inline-flex;
@@ -715,7 +689,7 @@
 
   <div class="ca-box">
     <span class="ca-tag">CA</span>
-    <code>SOON... Budi is still climbing</code>
+    <code>SOON...</code>
     <button onclick="copyCA(this)">Copy</button>
   </div>
 
@@ -827,7 +801,7 @@
       <p class="footer-desc">A memecoin made for fun, in honor of a real hero, Budi the orangutan, rescued by the International Animal Rescue team.</p>
       <a href="#" class="header-buy footer-buy">Buy $BUDI</a>
     </div>
-    <div class="footer-col">
+    <div class="footer-col footer-explore">
       <h4>Explore</h4>
       <a href="#story">The Legend</a>
       <a href="#gallery">Meme Gallery</a>
@@ -836,7 +810,7 @@
     <div class="footer-col footer-ca">
       <div class="ca-box">
         <span class="ca-tag">CA</span>
-        <code>SOON... Budi is still climbing</code>
+        <code>SOON...</code>
         <button onclick="copyCA(this)">Copy</button>
       </div>
     </div>
